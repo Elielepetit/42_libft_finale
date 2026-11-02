@@ -30,11 +30,6 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-int main(void) {
-	char *s = "test";
-	printf("%x - %x\n", ft_strchr("\x80\xff\x7f\x01 \xc3\xa9", -1), strchr("\x80\xff\x7f\x01 \xc3\xa9", -1));
-}
-
 // #include <stdio.h>
 
 // int main(int argc, char **argv)
