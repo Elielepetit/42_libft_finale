@@ -23,11 +23,16 @@ char	*ft_strchr(const char *s, int c)
 	str = (unsigned char *)s;
 	while (i <= len)
 	{
-		if (str[i] == (char) c)
+		if (str[i] == (unsigned char) c)
 			return (&((char *)str)[i]);
 		i++;
 	}
 	return (NULL);
+}
+
+int main(void) {
+	char *s = "test";
+	printf("%x - %x\n", ft_strchr("\x80\xff\x7f\x01 \xc3\xa9", -1), strchr("\x80\xff\x7f\x01 \xc3\xa9", -1));
 }
 
 // #include <stdio.h>

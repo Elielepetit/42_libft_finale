@@ -25,27 +25,30 @@ void	*ft_memcpy(void *dest, const void *src, size_t size)
 	return (dest);
 }
 
-// int main(void)
-// {
-//     /*int dest[] = {1, 2, 3, 4};
-//     int src[] = {0, 0, 0, 0};
-//     int destm[] = {1, 2, 3, 4, 5 ,6 ,7};
-//     int srcm[] = {0, 0, 0, 0, 0, 0 ,0, 0};
-//     ft_memcpy(dest, src, 4);
-//     memcpy(destm, srcm, 4);
-//     printf("%d", srcm);
-//     printf("%c", '\n');
-//     printf("%d", destm);
-//     printf("%c", '\n');*/
+int main(void)
+{
+	int src[] = {1, 2, 3, 4, 0};
+	int dest[] = {0, 0, 0, 0, 0};
+	int srcm[] = {1, 2, 3, 4, 5 ,6 ,7, 0};
+	int destm[] = {0, 0, 0, 0, 0, 0 ,0, 0};
 
-//     int src[] = {1,2,3,4,5,6,7,8,9};
-//     int dest[] = {0,0,0,0,0,0,0};
+	printf("%x\n%x\n", ft_memcpy(dest, src, 16), 0);
 
-//     ft_memcpy(dest, src, sizeof(dest));
+	for(int i = 0; src[i]; i++){
+		printf("%d", src[i]);
+	}
+	printf("\n");
+	for(int i = 0; dest[i]; i++){
+		printf("%d", dest[i]);
+	}
+	printf("\n");
 
-//     size_t i = 0;
-//     while (i < 7)
-//     {
-//         printf("%d", dest[i++]);
-//     }
-// }
+
+	ft_memcpy(dest, src, sizeof(dest));
+
+	size_t i = 0;
+	while (i < 7)
+	{
+		printf("%d", dest[i++]);
+	}
+}
